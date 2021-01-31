@@ -166,7 +166,7 @@ def sell_alt(client, alt_symbol, crypto_symbol):
     logger.info(order)
 
     # Binance server can take some time to save the order
-    time.sleep(2)
+    time.sleep(4)
 
     stat = client.get_order(
         symbol=alt_symbol+crypto_symbol, orderId=order[u'orderId'])
